@@ -1,0 +1,14 @@
+.form_label{
+    font-size: 18px;
+}
+
+.form{
+    width: 300px;
+    padding: 15px;
+    outline: 1px solid black;
+}
+
+.button{
+    margin-top: 10px;
+    cursor: pointer;
+}
