@@ -22,8 +22,17 @@ const ContactsList = ({ contacts, onDeleteContact, children }) => (
     </ul>
   </>
 );
-export default ContactsList;
 
 ContactsList.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.object),
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  onDeleteContact: PropTypes.func.isRequired,
+  children: PropTypes.node,
 };
+
+export default ContactsList;

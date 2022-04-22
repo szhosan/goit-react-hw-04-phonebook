@@ -1,4 +1,5 @@
 import s from './Section.module.css';
+import PropTypes from 'prop-types';
 
 function Container({ title, children }) {
   return (
@@ -8,5 +9,13 @@ function Container({ title, children }) {
     </div>
   );
 }
+
+Container.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+};
 
 export default Container;
