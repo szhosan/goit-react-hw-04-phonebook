@@ -10,7 +10,7 @@ const ContactSearch = ({ value, onChange }) => (
 );
 
 ContactSearch.propTypes = {
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

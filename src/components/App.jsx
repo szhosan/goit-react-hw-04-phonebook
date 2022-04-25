@@ -69,12 +69,11 @@ function App() {
       </Section>
       {contacts.length > 0 && (
         <Section title="Contacts">
+          <ContactSearch value={filter} onChange={handleSearchContact} />
           <ContactsList
             contacts={getFilteredContacts()}
             onDeleteContact={onDeleteContact}
-          >
-            <ContactSearch value={filter} onChange={handleSearchContact} />
-          </ContactsList>
+          />
         </Section>
       )}
     </>
