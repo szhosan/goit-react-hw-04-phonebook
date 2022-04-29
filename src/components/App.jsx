@@ -5,12 +5,12 @@ import { nanoid } from 'nanoid';
 import ContactsList from './ContactsList/ContactsList';
 import ContactSearch from './ContactSearch/ContactSearch';
 
-const LOCAL_STORAGE_KEY = 'contacts';
+const LOCAL_STORAGE_KEY = 'contacts-phoneBook';
 
 const useLocalStorage = defaultValue => {
   const [state, setState] = useState(() => {
-    return JSON.parse(
-      window.localStorage.getItem(LOCAL_STORAGE_KEY) ?? defaultValue
+    return (
+      JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY)) ?? defaultValue
     );
   });
 

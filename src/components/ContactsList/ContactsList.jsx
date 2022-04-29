@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import s from './ContactsList.module.css';
 
-const ContactsList = ({ contacts, onDeleteContact, children }) => (
+const ContactsList = ({ contacts, onDeleteContact }) => (
   <>
-    {children}
     <ul className={s.list}>
       {contacts.map(({ id, name, number }) => (
         <li key={id}>
@@ -29,7 +28,6 @@ ContactsList.propTypes = {
     })
   ),
   onDeleteContact: PropTypes.func.isRequired,
-  children: PropTypes.node,
 };
 
 export default ContactsList;
